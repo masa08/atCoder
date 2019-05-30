@@ -1,12 +1,14 @@
 n, m, x, y = gets.split.map(&:to_i)
 number_x = gets.split.map(&:to_i)
 number_y = gets.split.map(&:to_i)
-z = [*x+1..y]
-r = []
-z.each do |z|
-  r << z if z > number_x.max && z <= number_y.min
-end
-puts r.empty? ? "War" : "No War"
+number_x << x
+number_y << y
+# z = [*x+1..y]
+# r = []
+# z.each do |z|
+#   r << z if z > number_x.max && z <= number_y.min
+# end
+puts number_x.max >= number_y.min ? "War" : "No War"
 
 # r =[]
 # z.each do |z|
