@@ -1,10 +1,27 @@
-S = gets
-c = 0
-while S["ABC"] do
-  S.sub!(/ABC/, "BCA")
-  c += 1
+s = gets.chomp.gsub('BC', 'X')
+p s
+ans = 0
+a = 0
+p s.chars
+s.chars.each do |c|
+  case c
+  when 'A'
+    a += 1
+  when 'X'
+    ans += a
+  else
+    a = 0
+  end
 end
-p c
+p ans
+
+# S = gets
+# c = 0
+# while S["ABC"] do
+#   S.sub!(/ABC/, "BCA")
+#   c += 1
+# end
+# p c
 
 # loop do
 #   S[/ABC/] =  "BCA"
